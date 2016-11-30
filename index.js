@@ -69,7 +69,7 @@ var SimplePDF = function (_React$Component) {
           pdf.getPage(i).then(function (page) {
 
             // calculate scale according to the box size
-            var boxWidth = node.clientWidth;
+            var boxWidth = node.clientWidth - 40;
             var pdfWidth = page.getViewport(1).width;
             var scale = boxWidth / pdfWidth;
             var viewport = page.getViewport(scale);
