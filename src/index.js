@@ -39,7 +39,7 @@ export default class SimplePDF extends React.Component {
 
           // calculate scale according to the box size
           var boxWidth = node.clientWidth;
-          var pdfWidth = page.getViewport(1).width;
+          var pdfWidth = page.getViewport(1).width - 30;
           var scale = boxWidth / pdfWidth;
           var viewport = page.getViewport(scale);
 
